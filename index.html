@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adarsh's Super car Gallery</title>
+    <link id="css" rel="stylesheet" href="light-theme.css">
+    <link rel="shortcut icon" href="favicon.ico">
+  
+    
+</head>
+<body>
+    <header>
+        <h1>Adarsh's Super car Gallery</h1>
+    </header>
+    
+    
+
+<script src="index.js"></script>
+
+
+<div class="clock">
+    <span id="hrs">00</span>
+    <span>:</span>
+    <span id="min">00</span>
+    <span>:</span>
+    <span id="sec">00</span>
+    
+
+</div>
+
+<nav>
+    <a href="index.html" class="home">Home</a>
+    
+</nav>
+
+<nav>
+    <button onclick="changeTheme();
+    alert('Theme changed succesfully')" id="btn">Change theme</button>
+</nav>
+
+<div class="myGallery">
+    <img src="Images/buggati-chiron.jpeg" alt="buggati-chiron">
+    <img src="Images/dodge-charger.jpeg" alt="dodge-charger">
+    <img src="Images/lambo.jpeg" alt="lambo">
+    <img src="Images/mercedes.jpeg" alt="mercedes">
+    <img src="Images/AstonMartin.jpeg" alt="Aston Martin">
+    <img src="Images/Pagani-Huayra.jpeg" alt="Pagani-Huayra">
+</div>
+
+
+
+<footer>
+    <h2>Connect me at
+        <div class="socials">
+            <a href="https://www.linkedin.com/in/adarsh-dhar-a7a836180/"><img class="linkedIn" src="Images/linkedin.png" alt="linkedIn"></a>
+            <a href="https://github.com/Adarsh-Dhar"><img class="github" src="Images/github.png" alt="github"></a>
+            <a href="https://twitter.com/AdarshDhar_23"><img  class="twitter" src="Images/Untitled.png" alt="X"></a>
+            <a href="mailto:dharadarsh0@gmail.com"><img class="mail" src="Images/gmail.png" alt="gmail"></a>
+            
+
+        </div>
+    </h2>
+
+</footer>
+<script>
+    let hrs = document.getElementById('hrs');
+let min = document.getElementById('min');
+let sec = document.getElementById('sec');
+
+setInterval(()=>{
+    let currentTime= new Date()
+
+hrs.innerHTML = (currentTime.getHours()<10?"0":"")+currentTime.getHours();
+min.innerHTML = (currentTime.getMinutes()<10?"0":"")+currentTime.getMinutes();
+sec.innerHTML = (currentTime.getSeconds()<10?"0":"")+currentTime.getSeconds();
+},1000)
+
+
+
+</script>
+
+
+    
+</body>
+</html>
